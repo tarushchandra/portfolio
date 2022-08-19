@@ -1,0 +1,111 @@
+.topbar {
+    height: 60px;
+    min-width: 100%;
+    background-color: white;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0.5px 0px 5px rgb(204, 204, 204);
+}
+
+
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100%;
+    padding-left: 7%;
+    padding-right: 16%;
+    position: relative;
+}
+
+.wrapper .left {
+    display: flex;
+    align-items: center;
+    gap: 10%;
+}
+
+.wrapper .left .contact-info {
+    display: flex;
+    align-items: center;
+    gap: 15%;
+    font-size: 1.3rem;
+    margin-left: 20%;
+}
+
+.contact-info a i {
+    color: #750d34; 
+}
+
+.wrapper .left .logo a {
+    color: #750d34;
+    text-decoration: none;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.wrapper .right a {
+    color: #750d34;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0 10%;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100%;
+        padding-left: 5%;
+        padding-right: 13%;
+    }
+
+    .wrapper .left .contact-info {
+        display: flex;
+        align-items: center;
+        gap: 10%;
+        font-size: 1.3rem;
+        margin-left: 2%;
+    }
+
+    .wrapper .right a {
+        color: #750d34;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 0 7%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100%;
+        padding-left: 5%;
+        padding-right: 13%;
+    }
+
+    .wrapper .left .contact-info {
+        display: flex;
+        align-items: center;
+        gap: 10%;
+        font-size: 1.3rem;
+        margin-left: 2%;
+    }
+
+    .wrapper .right {
+        display: none;
+    }
+
+    .hamburger-icon i {
+        color: #750d34;
+    }
+}
