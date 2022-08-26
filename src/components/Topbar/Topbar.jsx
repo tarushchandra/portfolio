@@ -45,9 +45,6 @@ const Topbar = () => {
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </div>
-        {/* <span className="hamburger-icon">
-          <i className="fa-solid fa-bars"></i>
-        </span> */}
       </div>
     </div>
   );
