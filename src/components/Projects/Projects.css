@@ -17,7 +17,8 @@
     align-items: center;
     gap: 5%;
     min-width: 100%;
-    transition: 1s all
+    transition: 1s all;
+    position: relative;
 }
 
 
@@ -26,6 +27,17 @@
     font-size: 3rem;
     cursor: pointer;
     transition: 0.5s ;
+    position: absolute;
+}
+
+.left-icon {
+    position: absolute;
+    left: 8%;
+}
+
+.right-icon {
+    position: absolute;
+    right: 8%;
 }
 
 .slider i:hover {

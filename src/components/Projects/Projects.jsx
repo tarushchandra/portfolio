@@ -43,7 +43,10 @@ const Projects = () => {
     <div className="projects" id="projects">
       <h1>My Projects</h1>
       <div className="slider">
-        <i onClick={prevSlide} className="fa-solid fa-angles-left"></i>
+        <i
+          onClick={prevSlide}
+          className="fa-solid fa-angles-left left-icon"
+        ></i>
         <div className="container">
           {data.map((item) => {
             return (
@@ -61,7 +64,10 @@ const Projects = () => {
             );
           })}
         </div>
-        <i onClick={nextSlide} className="fa-solid fa-angles-right"></i>
+        <i
+          onClick={nextSlide}
+          className="fa-solid fa-angles-right right-icon"
+        ></i>
       </div>
     </div>
   );
