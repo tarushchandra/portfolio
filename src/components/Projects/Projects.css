@@ -21,23 +21,11 @@
     position: relative;
 }
 
-
 .slider i {
     color: #750d34;
     font-size: 3rem;
     cursor: pointer;
     transition: 0.5s ;
-    position: absolute;
-}
-
-.left-icon {
-    position: fixed;
-    left: 8%;
-}
-
-.right-icon {
-    position: fixed;
-    right: 8%;
 }
 
 .slider i:hover {
