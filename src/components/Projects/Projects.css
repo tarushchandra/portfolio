@@ -31,12 +31,12 @@
 }
 
 .left-icon {
-    position: absolute;
+    position: fixed;
     left: 8%;
 }
 
 .right-icon {
-    position: absolute;
+    position: fixed;
     right: 8%;
 }
 
