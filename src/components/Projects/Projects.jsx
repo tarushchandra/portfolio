@@ -13,18 +13,24 @@ const Projects = () => {
     },
     {
       id: 2,
+      img: "images/real-estate-app.png",
+      title: "Real Estate Filtering App",
+      link: "https://polite-griffin-42fd5b.netlify.app/",
+    },
+    {
+      id: 3,
       img: "images/crypto-tracker.png",
       title: "Cryptocurrency Tracker App",
       link: "https://zingy-stardust-bd85b2.netlify.app/",
     },
     {
-      id: 3,
+      id: 4,
       img: "images/movie-app.png",
       title: "Movies Info App",
       link: "https://legendary-liger-762282.netlify.app/",
     },
     {
-      id: 4,
+      id: 5,
       img: "images/todo-list.png",
       title: "Todo List App",
       link: "https://tubular-moonbeam-588923.netlify.app/",
@@ -51,6 +57,7 @@ const Projects = () => {
           {data.map((item) => {
             return (
               <div
+                title={item.title}
                 className={item.id === current ? "slide slide-active" : "slide"}
               >
                 {current === item.id && (

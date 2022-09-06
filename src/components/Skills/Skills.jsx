@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import PortfolioList from "../PortfolioList/PortfolioList";
 import "./Skills.css";
-import { techList, toolsList } from "./data";
+import { resumeArray, techList, toolsList } from "./data";
 
 const Skills = () => {
   const [selected, setSelected] = useState("tech");
+  const [resumeActive, setResumeActive] = useState(false);
   const [data, setData] = useState([]);
 
   const list = [
@@ -13,6 +14,7 @@ const Skills = () => {
       title: "Technologies",
     },
     { id: "tools", title: "Tools" },
+    { id: "resume", title: "My Resume" },
   ];
 
   useEffect(() => {
@@ -20,6 +22,8 @@ const Skills = () => {
       setData(techList);
     } else if (selected === "tools") {
       setData(toolsList);
+    } else if (selected === "resume") {
+      setData(resumeArray);
     }
   }, [selected]);
 
@@ -44,12 +48,14 @@ const Skills = () => {
       <div className="skills-container">
         {data.map((item) => {
           return (
-            <img
-              key={item.id}
-              src={item.img}
-              alt="icon-img"
-              title={item.title}
-            />
+            <a href={item.link} target="_blank" rel="noreferrer">
+              <img
+                key={item.id}
+                src={item.img}
+                alt="icon-img"
+                title={item.title}
+              />
+            </a>
           );
         })}
       </div>
