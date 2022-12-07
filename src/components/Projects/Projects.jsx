@@ -2,47 +2,35 @@ import React, { useState } from "react";
 import "./Projects.css";
 
 const Projects = () => {
-  const [current, setCurrent] = useState(1);
+  const [current, setCurrent] = useState(0);
 
   const data = [
     {
       id: 1,
-      img: "images/netflix.png",
-      title: "Netflix Clone",
-      link: "https://github.com/tarushchandra/netflix-clone/tree/main/Netflix%20Clone",
+      title: "E-Commerce Application",
+      github_link: "https://github.com/tarushchandra/Little-Basket",
+      live_link: "https://littlebasket.netlify.app/",
+      video: "videos/littleBasket.mp4",
+      desc: "Created a full stack E-Commerce Application using MERN Stack, with all the major features like Cart Manipulation, Payment Integration followed by a confirmatory section on the front-end about the successful order with all the information persisted in the database including number of users, products, orders and carts. Used Redux-toolkit for state management and JSON Web Tokens, Firebase OAuth for web security.",
     },
     {
       id: 2,
-      img: "images/real-estate-app.png",
-      title: "Real Estate Filtering App",
-      link: "https://polite-griffin-42fd5b.netlify.app/",
-    },
-    {
-      id: 3,
-      img: "images/crypto-tracker.png",
-      title: "Cryptocurrency Tracker App",
-      link: "https://zingy-stardust-bd85b2.netlify.app/",
-    },
-    {
-      id: 4,
-      img: "images/movie-app.png",
-      title: "Movies Info App",
-      link: "https://legendary-liger-762282.netlify.app/",
-    },
-    {
-      id: 5,
-      img: "images/todo-list.png",
-      title: "Todo List App",
-      link: "https://tubular-moonbeam-588923.netlify.app/",
+      title: "Netflix Clone",
+      github_link:
+        "https://github.com/tarushchandra/netflix-clone/tree/main/Netflix%20Clone",
+      live_link:
+        "https://github.com/tarushchandra/netflix-clone/tree/main/Netflix%20Clone",
+      video: "videos/netflix2.mp4",
+      desc: "Implemented the landing page with the help of HTML, CSS and JavaScript by taking the original Netflix website as the reference. Used font awesome for icons",
     },
   ];
 
   function nextSlide() {
-    setCurrent(current === data.length ? 1 : current + 1);
+    setCurrent(current < data.length - 1 ? current + 1 : 0);
   }
 
   function prevSlide() {
-    setCurrent(current === 1 ? data.length : current - 1);
+    setCurrent(current > 0 ? current - 1 : data.length - 1);
   }
 
   return (
@@ -53,20 +41,33 @@ const Projects = () => {
           onClick={prevSlide}
           className="fa-solid fa-angles-left left-icon"
         ></i>
-        <div className="container">
+        <div className="items-container">
           {data.map((item) => {
             return (
               <div
-                title={item.title}
-                className={item.id === current ? "slide slide-active" : "slide"}
+                key={item.id}
+                className="item"
+                style={{ transform: `translateX(-${current * 100}vw)` }}
               >
-                {current === item.id && (
-                  <div>
-                    <a href={item.link} target="_blank" rel="noreferrer">
-                      <img key={item.id} src={item.img} alt="project-img" />
-                    </a>
-                  </div>
-                )}
+                <a
+                  className="live-link"
+                  href={item.live_link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <video autoPlay muted loop>
+                    <source src={item.video} type="video/mp4" />
+                  </video>
+                  <p>{item.desc}</p>
+                  <a
+                    className="github-icon"
+                    href={item.github_link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="fa-brands fa-github"></i>
+                  </a>
+                </a>
               </div>
             );
           })}

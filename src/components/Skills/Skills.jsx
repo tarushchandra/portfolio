@@ -5,7 +5,6 @@ import { resumeArray, techList, toolsList } from "./data";
 
 const Skills = () => {
   const [selected, setSelected] = useState("tech");
-  const [resumeActive, setResumeActive] = useState(false);
   const [data, setData] = useState([]);
 
   const list = [
@@ -25,6 +24,10 @@ const Skills = () => {
     } else if (selected === "resume") {
       setData(resumeArray);
     }
+
+    return () => {
+      setData([]);
+    };
   }, [selected]);
 
   return (
