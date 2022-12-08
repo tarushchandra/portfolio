@@ -6,6 +6,10 @@ import Contact from "./components/Contact/Contact";
 import "./App.css";
 
 function App() {
+  window.addEventListener("scroll", () => {
+    console.log(window.pageYOffset);
+  });
+
   return (
     <div className="app">
       <Topbar />

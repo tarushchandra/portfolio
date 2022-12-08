@@ -104,6 +104,6 @@ export const resumeArray = [
     id: 1,
     title: "Resume",
     img: "../../../images/resume.png",
-    link: "https://drive.google.com/file/d/1PFnChdnVEX543bKm9jJeDXZQz3AT7rkh/view",
+    link: "https://drive.google.com/file/d/1CSjROzQwiXuOOAYF09XDgST3gh4aAOv9/view?usp=sharing",
   },
 ];

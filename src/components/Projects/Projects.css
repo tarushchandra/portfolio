@@ -70,6 +70,7 @@
     transform: scale(1.02);
 }
 
+
 .item .live-link video {
     width: 62vw;
     border-radius: 10px;
@@ -115,27 +116,44 @@
 
 
 @media only screen and (max-width: 768px) {
+    .projects {
+        padding: 0em 0;
+    }
+
     .projects h1 {
-        font-size: 3rem;
-        margin-top: 2%;
+        font-size: 2.5rem;
     }
 
     .slider {
-        margin-top: 10%;
+        margin-top: 0.5em;
     }
 
     .slider i {
-        font-size: 2rem;
+        display: none;        
     }
 
-    .container {
-        max-height: 78vh;
-        max-width: 75vw;
+    .slider .items-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8em;
     }
 
-    .container img {
-        max-width: 100%;
-        max-width: 100%;
+    .item .live-link:hover {
+        background-color: transparent;
+        transform: scale(1);
+    }
+
+    .item .live-link video {
+        width: 60vw;
+    }
+
+    .item .live-link video:hover {
+        opacity: 1;
+        filter: blur(0px);
+    }
+
+    .item .live-link p {
+        display: none;
     }
 }
 

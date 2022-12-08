@@ -57,6 +57,10 @@
     padding: 0 10%;
 }
 
+.wrapper .right .active-page {
+    border-bottom: 2px solid #750d34;
+}
+
 
 .hamburger-icon i {
     display: none;

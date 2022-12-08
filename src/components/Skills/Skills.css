@@ -53,15 +53,21 @@
 
 
 @media only screen and (max-width: 768px) {
+    .heading h1 {
+        font-size: 2.5rem;
+    }    
+
     .skills-container {
         max-width: 60%;
         margin-top: 2%;
+        padding: 0em;
     }
 
     .skills-container img {
-        min-width: 110px;
-        min-width: 110px;
+        min-width: 100px;
+        min-width: 100px;
     }
+    
     
 }
 
