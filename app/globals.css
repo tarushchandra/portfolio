@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap');
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap");
+@import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -71,9 +71,9 @@
   --input: 35 18% 83%;
   --ring: 13 82% 53%;
 
-  --app-font-sans: 'Manrope', sans-serif;
-  --app-font-serif: 'Newsreader', serif;
-  --app-font-mono: 'DM Mono', monospace;
+  --app-font-sans: "Manrope", sans-serif;
+  --app-font-serif: "Newsreader", serif;
+  --app-font-mono: "DM Mono", monospace;
   --radius: 0.5rem;
 }
 
@@ -108,8 +108,10 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
+  *,
+  ::before,
+  ::after {
+    box-sizing: content-box;
   }
 
   body {
@@ -161,12 +163,13 @@ body {
   outline-offset: 4px;
 }
 .grid-paper {
-  background-image: linear-gradient(hsl(var(--foreground) / 0.055) 1px, transparent 1px),
+  background-image:
+    linear-gradient(hsl(var(--foreground) / 0.055) 1px, transparent 1px),
     linear-gradient(90deg, hsl(var(--foreground) / 0.055) 1px, transparent 1px);
   background-size: 34px 34px;
 }
 .noise::after {
-  content: '';
+  content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;

@@ -27,11 +27,10 @@ export function Hero() {
           background: `radial-gradient(500px circle at ${pointer.x}% ${pointer.y}%, hsl(var(--primary) / .12), transparent 60%)`,
         }}
       />
-      <div className="mx-auto grid min-h-[calc(100dvh-73px)] max-w-[1240px] items-center gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[1.2fr_.8fr] lg:gap-4 lg:py-16">
-        <div className="relative z-10 max-w-[790px]">
+      <div className="mx-auto grid min-h-[calc(100dvh-73px)] max-w-[1240px] items-center gap-12 px-5 py-8 sm:px-8 lg:grid-cols-12 lg:gap-4 lg:py-12">
+        <div className="relative z-10 order-2 lg:order-1 lg:col-span-6">
           <div className="reveal eyebrow mb-8 text-primary">
-            Frontend-focused full-stack engineer{" "}
-            <span className="ml-2 text-muted-foreground">/ 2025</span>
+            Full-stack Developer
           </div>
           <h1
             className="reveal reveal-delay-1 display-font max-w-4xl text-[clamp(3.7rem,9vw,8.5rem)] leading-[.86] tracking-[-.055em]"
@@ -41,7 +40,7 @@ export function Hero() {
             <br />
             <em className="not-italic text-primary">systems</em> people feel.
           </h1>
-          <p className="reveal reveal-delay-2 mt-9 max-w-[520px] text-base leading-7 text-muted-foreground sm:text-lg">
+          <p className="reveal reveal-delay-2 mt-9 max-w-full text-base leading-7 text-muted-foreground sm:text-lg">
             Tarush Chandra is a frontend-focused full-stack software engineer
             who moved from Electrical Engineering into software through roughly
             3.5 years of rigorous, self-directed practice.
@@ -72,13 +71,13 @@ export function Hero() {
         </div>
 
         <div
-          className="relative mx-auto aspect-square w-full max-w-[410px]"
+          className="relative mx-auto aspect-square w-full order-1 lg:order-2 lg:col-span-6"
           data-testid="hero-portrait"
         >
-          <div className="absolute inset-[14%] rounded-full border border-primary/30" />
-          <div className="hero-orbit absolute inset-[7%] rounded-full border border-dashed border-accent/50" />
-          <div className="absolute inset-[27%] rounded-full bg-primary/10" />
-          <div className="absolute inset-[25%] overflow-hidden rounded-full border border-primary bg-background p-2 shadow-[0_0_0_14px_hsl(var(--primary)/.08)]">
+          <div className="absolute inset-[0%] rounded-full border border-primary/30" />
+          <div className="hero-orbit absolute inset-[2%] rounded-full border border-dashed border-accent/50" />
+
+          <div className="absolute inset-[6%] overflow-hidden rounded-full border border-primary bg-background p-2 shadow-[0_0_0_14px_hsl(var(--primary)/.08)]">
             <Image
               src="/images/tarush-portrait.png"
               alt="Portrait of Tarush Chandra"
@@ -89,12 +88,6 @@ export function Hero() {
               priority
             />
           </div>
-          <span className="absolute left-[12%] top-[22%] mono-font text-[10px] text-muted-foreground">
-            01 — interface
-          </span>
-          <span className="absolute bottom-[21%] right-[4%] mono-font text-[10px] text-muted-foreground">
-            systems / craft
-          </span>
           <span className="absolute right-[20%] top-[9%] h-2 w-2 bg-primary" />
           <span className="absolute bottom-[13%] left-[18%] h-2 w-2 rounded-full bg-accent" />
         </div>
