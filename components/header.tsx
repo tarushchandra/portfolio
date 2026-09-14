@@ -37,13 +37,6 @@ export function Header() {
             Work
           </Link>
           <Link
-            href="/#about"
-            className="nav-link focus-ring text-[13px] font-semibold"
-            data-testid="link-nav-about"
-          >
-            About
-          </Link>
-          <Link
             href="/#skills"
             className="nav-link focus-ring text-[13px] font-semibold"
             data-testid="link-nav-skills"
