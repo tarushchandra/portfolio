@@ -1,4 +1,8 @@
+import Link from "next/link";
+import { SiGithub, SiLeetcode, SiX, SiYoutube, SiGmail } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa";
 import { Github, Linkedin, Mail } from "lucide-react";
+import { Socials } from "./socials";
 
 export function Footer() {
   return (
@@ -11,34 +15,7 @@ export function Footer() {
           TC / Made with intent
         </p>
         <div className="flex items-center gap-5">
-          <a
-            href="https://github.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="focus-ring nav-link"
-            aria-label="GitHub profile"
-            data-testid="link-github"
-          >
-            <Github size={16} />
-          </a>
-          <a
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="focus-ring nav-link"
-            aria-label="LinkedIn profile"
-            data-testid="link-linkedin"
-          >
-            <Linkedin size={16} />
-          </a>
-          <a
-            href="mailto:tarush@example.com"
-            className="focus-ring nav-link"
-            aria-label="Email Tarush"
-            data-testid="link-footer-email"
-          >
-            <Mail size={16} />
-          </a>
+          <Socials />
         </div>
         <p className="mono-font text-[10px] uppercase tracking-[.12em] text-muted-foreground">
           © {new Date().getFullYear()} Tarush Chandra

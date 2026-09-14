@@ -1,9 +1,8 @@
 "use client";
-
 import { useState, type MouseEvent } from "react";
 import Image from "next/image";
-import { ArrowDownRight, Mail, Github, Linkedin } from "lucide-react";
-import Link from "next/link";
+import { ArrowDownRight, Mail } from "lucide-react";
+import { Socials } from "../socials";
 
 export function Hero() {
   const [pointer, setPointer] = useState({ x: 50, y: 50 });
@@ -28,7 +27,7 @@ export function Hero() {
           background: `radial-gradient(500px circle at ${pointer.x}% ${pointer.y}%, hsl(var(--primary) / .12), transparent 60%)`,
         }}
       />
-      <div className="mx-auto grid min-h-[calc(100dvh-73px)] max-w-[1240px] items-center gap-12 px-5 py-8 sm:px-8 lg:grid-cols-12 lg:gap-4 lg:py-12">
+      <div className="mx-auto grid min-h-[calc(100dvh-73px)] max-w-[1240px] items-center gap-12 px-5 py-8 sm:px-8 lg:grid-cols-12 lg:gap-4 lg:py-4">
         <div className="relative z-10 order-2 lg:order-1 lg:col-span-6">
           <div className="reveal reveal-delay-1 eyebrow mb-8 text-primary">
             Full-stack Developer
@@ -46,34 +45,7 @@ export function Hero() {
             efficient code. Let's connect and collaborate! 👨‍💻
           </p>
           <div className="reveal reveal-delay-3 my-4 flex items-center gap-5">
-            <Link
-              href="https://github.com/tarushchandra"
-              target="_blank"
-              rel="noreferrer"
-              className="focus-ring nav-link"
-              aria-label="GitHub profile"
-              data-testid="link-github"
-            >
-              <Github size={16} className="text-primary" />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/tarush-chandra/"
-              target="_blank"
-              rel="noreferrer"
-              className="focus-ring nav-link"
-              aria-label="LinkedIn profile"
-              data-testid="link-linkedin"
-            >
-              <Linkedin size={16} className="text-primary" />
-            </Link>
-            <Link
-              href="mailto:tarushchandra6@gmail.com"
-              className="focus-ring nav-link"
-              aria-label="Email Tarush"
-              data-testid="link-footer-email"
-            >
-              <Mail size={16} className="text-primary" />
-            </Link>
+            <Socials />
           </div>
           <div className="reveal reveal-delay-4 mt-10 flex flex-wrap items-center gap-3">
             <a
@@ -122,7 +94,8 @@ export function Hero() {
         </div>
       </div>
       <div className="pointer-events-none absolute bottom-5 right-8 hidden items-center gap-3 mono-font text-[10px] uppercase tracking-[.16em] text-muted-foreground lg:flex">
-        <span className="h-px w-10 bg-border" /> Move through the detail
+        <span className="h-px w-10 bg-border" /> Scroll down{" "}
+        <ArrowDownRight size={12} />
       </div>
     </section>
   );
