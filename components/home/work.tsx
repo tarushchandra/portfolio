@@ -12,73 +12,95 @@ export function Work() {
       <div className="mx-auto max-w-[1240px]">
         <div className="mb-12 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div>
-            <SectionLabel index="01">Selected work</SectionLabel>
-            <h2 className="display-font mt-5 max-w-2xl text-5xl leading-[.95] tracking-[-.04em] sm:text-7xl">
-              One deep build
+            <SectionLabel index="01">Work</SectionLabel>
+            <h2 className="display-font mt-5  text-5xl leading-[.95] tracking-[-.04em] sm:text-7xl">
+              Things I’ve built.
               <br />
-              <span className="text-muted-foreground">beats five claims.</span>
+              <span className="text-muted-foreground">
+                Production systems and experiments.
+              </span>
             </h2>
           </div>
-          <p className="max-w-[290px] text-sm leading-6 text-muted-foreground">
-            A production social platform built end to end — from interaction
-            model to cloud edge.
-          </p>
         </div>
 
-        <Link
-          href="/work/social-platform"
+        <div
           className="group focus-ring block border-y hairline"
           data-testid="link-case-study"
         >
           <div className="grid gap-10 py-10 lg:grid-cols-[1fr_1.1fr] lg:gap-16 lg:py-14">
-            <div className="relative min-h-[290px] overflow-hidden bg-[#162a35] p-6 text-[#f4efe5]">
-              <div className="grid-paper absolute inset-0 opacity-20" />
-              <div className="relative flex h-full flex-col justify-between">
-                <div className="flex items-center justify-between mono-font text-[10px] uppercase tracking-[.13em] text-[#a9c5c4]">
-                  <span>Case / 001</span>
-                  <span>Production</span>
-                </div>
-                <div className="relative">
-                  <div className="absolute -right-2 -top-16 h-44 w-44 rounded-full border border-[#ef7655]/70" />
-                  <div className="absolute -right-10 -top-24 h-60 w-60 rounded-full border border-dashed border-[#78b6b2]/60" />
-                  <p className="display-font text-6xl leading-[.8] tracking-[-.06em]">
-                    Common
-                    <br />
-                    <span className="text-[#ef7655]">Ground</span>
-                  </p>
-                  <p className="mt-5 max-w-[220px] mono-font text-[10px] uppercase leading-5 tracking-[.08em] text-[#a9c5c4]">
-                    A social layer for the ideas worth returning to.
-                  </p>
-                </div>
-                <div className="flex justify-between mono-font text-[10px] text-[#a9c5c4]">
-                  <span>Next.js / GraphQL</span>
-                  <span>2024—25</span>
-                </div>
-              </div>
+            <div>
+              <video
+                src="/videos/kuckoo-demo.m4v"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="h-full w-full object-cover"
+              />
             </div>
 
             <div className="flex flex-col justify-between">
               <div>
                 <div className="mb-5 flex items-center gap-3">
-                  <span className="eyebrow text-primary">Flagship project</span>
                   <span className="h-px flex-1 bg-border" />
-                  <ArrowUpRight
-                    className="text-primary transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
-                    size={19}
-                  />
+                  <div className="flex items-center gap-4">
+                    <Link
+                      className="flex items-center gap-0 text-primary hover:underline"
+                      href="https://kuckoo.tarushchandra.com"
+                      target="_blank"
+                    >
+                      <span className="eyebrow text-primary">Live</span>
+                      <ArrowUpRight
+                        className="text-primary transition-transform"
+                        size={19}
+                      />
+                    </Link>
+                    <Link
+                      className="flex items-center gap-0 text-primary hover:underline"
+                      href="https://github.com/tarushchandra/kuckoo-server"
+                      target="_blank"
+                    >
+                      <span className="eyebrow text-primary">Source-1</span>
+                      <ArrowUpRight
+                        className="text-primary transition-transform"
+                        size={19}
+                      />
+                    </Link>
+                    <Link
+                      className="flex items-center gap-0 text-primary hover:underline"
+                      href="https://github.com/tarushchandra/kuckoo-client"
+                      target="_blank"
+                    >
+                      <span className="eyebrow text-primary">Source-2</span>
+                      <ArrowUpRight
+                        className="text-primary transition-transform"
+                        size={19}
+                      />
+                    </Link>
+                  </div>
                 </div>
                 <h3 className="max-w-xl text-3xl font-bold tracking-[-.04em] sm:text-5xl">
-                  Common Ground — social media, treated as a system.
+                  Kuckoo — a full-stack social platform.
                 </h3>
                 <p className="mt-6 max-w-xl leading-7 text-muted-foreground">
-                  A production-grade platform designed and shipped across the
-                  stack. The case study goes behind the interface: auth,
-                  realtime presence, query shape, caching, media delivery, and
-                  deployment.
+                  A full-stack social platform for sharing posts, discovering
+                  content, and connecting with others in real time. Built with
+                  authentication, media uploads, live presence, real-time chats,
+                  notifications, and responsive feeds, along with caching and
+                  optimized data delivery across the stack.
                 </p>
               </div>
               <div className="mt-10 flex flex-wrap gap-2">
-                {["Next.js", "GraphQL", "Redis", "AWS"].map((item) => (
+                {[
+                  "Next.js",
+                  "Express",
+                  "GraphQL",
+                  "PostgreSQL",
+                  "Redis",
+                  "Websockets",
+                  "Docker",
+                  "AWS",
+                ].map((item) => (
                   <span
                     key={item}
                     className="border hairline px-3 py-1.5 mono-font text-[10px] text-muted-foreground"
@@ -89,7 +111,7 @@ export function Work() {
               </div>
             </div>
           </div>
-        </Link>
+        </div>
       </div>
     </section>
   );
