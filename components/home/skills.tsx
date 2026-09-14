@@ -10,7 +10,7 @@ export function Skills() {
     >
       <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr]">
         <div>
-          <SectionLabel index="03">Tools of the trade</SectionLabel>
+          <SectionLabel index="02">Skills</SectionLabel>
           <h2 className="display-font mt-5 text-5xl leading-[.9] tracking-[-.05em] sm:text-7xl">
             The stack is
             <br />
