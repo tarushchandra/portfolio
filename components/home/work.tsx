@@ -1,10 +1,14 @@
-import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
-import { SectionLabel } from '@/components/section-label';
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { SectionLabel } from "@/components/section-label";
 
-export function WorkSection() {
+export function Work() {
   return (
-    <section id="work" className="mx-auto max-w-[1240px] scroll-mt-20 px-5 py-24 sm:px-8 lg:py-36" data-testid="section-work">
+    <section
+      id="work"
+      className="mx-auto max-w-[1240px] scroll-mt-20 px-5 py-24 sm:px-8 lg:py-36"
+      data-testid="section-work"
+    >
       <div className="mb-12 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
         <div>
           <SectionLabel index="01">Selected work</SectionLabel>
@@ -15,11 +19,16 @@ export function WorkSection() {
           </h2>
         </div>
         <p className="max-w-[290px] text-sm leading-6 text-muted-foreground">
-          A production social platform built end to end — from interaction model to cloud edge.
+          A production social platform built end to end — from interaction model
+          to cloud edge.
         </p>
       </div>
 
-      <Link href="/work/social-platform" className="group focus-ring block border-y hairline" data-testid="link-case-study">
+      <Link
+        href="/work/social-platform"
+        className="group focus-ring block border-y hairline"
+        data-testid="link-case-study"
+      >
         <div className="grid gap-10 py-10 lg:grid-cols-[1fr_1.1fr] lg:gap-16 lg:py-14">
           <div className="relative min-h-[290px] overflow-hidden bg-[#162a35] p-6 text-[#f4efe5]">
             <div className="grid-paper absolute inset-0 opacity-20" />
@@ -61,13 +70,17 @@ export function WorkSection() {
                 Common Ground — social media, treated as a system.
               </h3>
               <p className="mt-6 max-w-xl leading-7 text-muted-foreground">
-                A production-grade platform designed and shipped across the stack. The case study goes behind the
-                interface: auth, realtime presence, query shape, caching, media delivery, and deployment.
+                A production-grade platform designed and shipped across the
+                stack. The case study goes behind the interface: auth, realtime
+                presence, query shape, caching, media delivery, and deployment.
               </p>
             </div>
             <div className="mt-10 flex flex-wrap gap-2">
-              {['Next.js', 'GraphQL', 'Redis', 'AWS'].map((item) => (
-                <span key={item} className="border hairline px-3 py-1.5 mono-font text-[10px] text-muted-foreground">
+              {["Next.js", "GraphQL", "Redis", "AWS"].map((item) => (
+                <span
+                  key={item}
+                  className="border hairline px-3 py-1.5 mono-font text-[10px] text-muted-foreground"
+                >
                   {item}
                 </span>
               ))}

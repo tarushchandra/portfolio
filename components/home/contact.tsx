@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useState, type FormEvent } from 'react';
-import { ArrowUpRight, Check } from 'lucide-react';
-import { SectionLabel } from '@/components/section-label';
+import { useState, type FormEvent } from "react";
+import { ArrowUpRight, Check } from "lucide-react";
+import { SectionLabel } from "@/components/section-label";
 
-export function ContactSection() {
+export function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -13,7 +13,11 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="scroll-mt-20 border-t hairline bg-[#162a35] text-[#f4efe5]" data-testid="section-contact">
+    <section
+      id="contact"
+      className="scroll-mt-20 border-t hairline bg-[#162a35] text-[#f4efe5]"
+      data-testid="section-contact"
+    >
       <div className="mx-auto grid max-w-[1240px] gap-16 px-5 py-24 sm:px-8 lg:grid-cols-[1fr_.8fr] lg:py-32">
         <div>
           <SectionLabel index="04">Open channel</SectionLabel>
@@ -23,8 +27,8 @@ export function ContactSection() {
             <span className="text-[#ef7655]">problem?</span>
           </h2>
           <p className="mt-8 max-w-md leading-7 text-[#a9c5c4]">
-            I like working with people who care about the details and are honest about the constraints. Email is
-            the quickest route in.
+            I like working with people who care about the details and are honest
+            about the constraints. Email is the quickest route in.
           </p>
           <a
             href="mailto:tarush@example.com"
@@ -35,13 +39,21 @@ export function ContactSection() {
           </a>
         </div>
 
-        <form onSubmit={handleSubmit} className="border border-[#a9c5c4]/30 p-5 sm:p-8" data-testid="form-contact">
+        <form
+          onSubmit={handleSubmit}
+          className="border border-[#a9c5c4]/30 p-5 sm:p-8"
+          data-testid="form-contact"
+        >
           <div className="mb-8 flex items-center justify-between">
             <span className="eyebrow text-[#a9c5c4]">Or leave a note</span>
-            <span className="mono-font text-[10px] text-[#a9c5c4]">01 / 02</span>
+            <span className="mono-font text-[10px] text-[#a9c5c4]">
+              01 / 02
+            </span>
           </div>
           <label className="block">
-            <span className="mono-font text-[10px] uppercase tracking-[.12em] text-[#a9c5c4]">Your name</span>
+            <span className="mono-font text-[10px] uppercase tracking-[.12em] text-[#a9c5c4]">
+              Your name
+            </span>
             <input
               required
               name="name"
@@ -51,7 +63,9 @@ export function ContactSection() {
             />
           </label>
           <label className="mt-6 block">
-            <span className="mono-font text-[10px] uppercase tracking-[.12em] text-[#a9c5c4]">Email address</span>
+            <span className="mono-font text-[10px] uppercase tracking-[.12em] text-[#a9c5c4]">
+              Email address
+            </span>
             <input
               required
               type="email"
@@ -62,7 +76,9 @@ export function ContactSection() {
             />
           </label>
           <label className="mt-6 block">
-            <span className="mono-font text-[10px] uppercase tracking-[.12em] text-[#a9c5c4]">What are you building?</span>
+            <span className="mono-font text-[10px] uppercase tracking-[.12em] text-[#a9c5c4]">
+              What are you building?
+            </span>
             <textarea
               required
               name="message"
@@ -88,8 +104,13 @@ export function ContactSection() {
             )}
           </button>
           {submitted && (
-            <p className="mt-4 text-xs text-[#a9c5c4]" role="status" data-testid="status-contact-success">
-              Thanks — this demo captured your note. Please use the email above to start a real thread.
+            <p
+              className="mt-4 text-xs text-[#a9c5c4]"
+              role="status"
+              data-testid="status-contact-success"
+            >
+              Thanks — this demo captured your note. Please use the email above
+              to start a real thread.
             </p>
           )}
         </form>

@@ -1,45 +1,74 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
-import { Menu, Moon, Sun, X } from 'lucide-react';
-import { useTheme } from '@/components/theme-provider';
+import { useState } from "react";
+import Link from "next/link";
+import { Menu, Moon, Sun, X } from "lucide-react";
+import { useTheme } from "@/context/theme-provider";
 
-export function SiteHeader() {
+export function Header() {
   const { dark, setDark } = useTheme();
   const [open, setOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-40 border-b hairline bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex h-[72px] max-w-[1240px] items-center justify-between px-5 sm:px-8">
-        <Link href="/" className="focus-ring flex items-center gap-3" data-testid="link-home">
+        <Link
+          href="/"
+          className="focus-ring flex items-center gap-3"
+          data-testid="link-home"
+        >
           <span className="flex h-8 w-8 items-center justify-center bg-primary text-sm font-extrabold text-primary-foreground">
             TC
           </span>
-          <span className="hidden text-sm font-bold tracking-[-.02em] sm:block">Tarush Chandra</span>
+          <span className="hidden text-sm font-bold tracking-[-.02em] sm:block">
+            Tarush Chandra
+          </span>
         </Link>
 
-        <nav className="hidden items-center gap-7 md:flex" aria-label="Primary navigation">
-          <Link href="/#work" className="nav-link focus-ring text-[13px] font-semibold" data-testid="link-nav-work">
+        <nav
+          className="hidden items-center gap-7 md:flex"
+          aria-label="Primary navigation"
+        >
+          <Link
+            href="/#work"
+            className="nav-link focus-ring text-[13px] font-semibold"
+            data-testid="link-nav-work"
+          >
             Work
           </Link>
-          <Link href="/#about" className="nav-link focus-ring text-[13px] font-semibold" data-testid="link-nav-about">
+          <Link
+            href="/#about"
+            className="nav-link focus-ring text-[13px] font-semibold"
+            data-testid="link-nav-about"
+          >
             About
           </Link>
-          <Link href="/#skills" className="nav-link focus-ring text-[13px] font-semibold" data-testid="link-nav-skills">
+          <Link
+            href="/#skills"
+            className="nav-link focus-ring text-[13px] font-semibold"
+            data-testid="link-nav-skills"
+          >
             Skills
           </Link>
-          <Link href="/#contact" className="nav-link focus-ring text-[13px] font-semibold" data-testid="link-nav-contact">
+          <Link
+            href="/#contact"
+            className="nav-link focus-ring text-[13px] font-semibold"
+            data-testid="link-nav-contact"
+          >
             Contact
           </Link>
-          <Link href="/resume" className="nav-link focus-ring text-[13px] font-semibold" data-testid="link-nav-resume">
+          <Link
+            href="/resume"
+            className="nav-link focus-ring text-[13px] font-semibold"
+            data-testid="link-nav-resume"
+          >
             Resume <span className="ml-1 text-primary">↗</span>
           </Link>
           <button
             type="button"
             onClick={() => setDark(!dark)}
             className="focus-ring flex h-9 w-9 items-center justify-center border hairline text-muted-foreground transition-colors hover:text-foreground"
-            aria-label={dark ? 'Use light mode' : 'Use dark mode'}
+            aria-label={dark ? "Use light mode" : "Use dark mode"}
             data-testid="button-toggle-theme"
           >
             {dark ? <Sun size={15} /> : <Moon size={15} />}
@@ -51,7 +80,7 @@ export function SiteHeader() {
             type="button"
             onClick={() => setDark(!dark)}
             className="focus-ring flex h-9 w-9 items-center justify-center border hairline text-muted-foreground"
-            aria-label={dark ? 'Use light mode' : 'Use dark mode'}
+            aria-label={dark ? "Use light mode" : "Use dark mode"}
             data-testid="button-toggle-theme-mobile"
           >
             {dark ? <Sun size={15} /> : <Moon size={15} />}
@@ -60,7 +89,7 @@ export function SiteHeader() {
             type="button"
             onClick={() => setOpen(!open)}
             className="focus-ring flex h-9 w-9 items-center justify-center border hairline"
-            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-label={open ? "Close menu" : "Open menu"}
             data-testid="button-toggle-menu"
           >
             {open ? <X size={17} /> : <Menu size={17} />}
@@ -69,9 +98,12 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <nav className="border-t hairline px-5 py-4 md:hidden" aria-label="Mobile navigation">
+        <nav
+          className="border-t hairline px-5 py-4 md:hidden"
+          aria-label="Mobile navigation"
+        >
           <div className="flex flex-col gap-4">
-            {['work', 'about', 'skills', 'contact'].map((item) => (
+            {["work", "about", "skills", "contact"].map((item) => (
               <Link
                 key={item}
                 href={`/#${item}`}
