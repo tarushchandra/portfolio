@@ -2,7 +2,8 @@
 
 import { useState, type MouseEvent } from "react";
 import Image from "next/image";
-import { ArrowDownRight, Mail } from "lucide-react";
+import { ArrowDownRight, Mail, Github, Linkedin } from "lucide-react";
+import Link from "next/link";
 
 export function Hero() {
   const [pointer, setPointer] = useState({ x: 50, y: 50 });
@@ -40,11 +41,41 @@ export function Hero() {
             <br />
             <em className="not-italic text-primary">systems</em> people feel.
           </h1>
-          <p className="reveal reveal-delay-2 mt-9 max-w-full text-base leading-7 text-muted-foreground sm:text-lg">
+          <p className="reveal reveal-delay-3 mt-9 max-w-full text-base leading-7 text-muted-foreground sm:text-lg">
             Tarush Chandra is a frontend-focused full-stack software engineer
             who moved from Electrical Engineering into software through roughly
             3.5 years of rigorous, self-directed practice.
           </p>
+          <div className="reveal reveal-delay-3 my-4 flex items-center gap-5">
+            <Link
+              href="https://github.com/tarushchandra"
+              target="_blank"
+              rel="noreferrer"
+              className="focus-ring nav-link"
+              aria-label="GitHub profile"
+              data-testid="link-github"
+            >
+              <Github size={16} className="text-primary" />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/tarush-chandra/"
+              target="_blank"
+              rel="noreferrer"
+              className="focus-ring nav-link"
+              aria-label="LinkedIn profile"
+              data-testid="link-linkedin"
+            >
+              <Linkedin size={16} className="text-primary" />
+            </Link>
+            <Link
+              href="mailto:tarushchandra6@gmail.com"
+              className="focus-ring nav-link"
+              aria-label="Email Tarush"
+              data-testid="link-footer-email"
+            >
+              <Mail size={16} className="text-primary" />
+            </Link>
+          </div>
           <div className="reveal reveal-delay-3 mt-10 flex flex-wrap items-center gap-3">
             <a
               href="#work"
@@ -71,7 +102,7 @@ export function Hero() {
         </div>
 
         <div
-          className="relative mx-auto aspect-square w-full order-1 lg:order-2 lg:col-span-6"
+          className="relative reveal reveal-delay-1 mx-auto aspect-square w-full order-1 lg:order-2 lg:col-span-6"
           data-testid="hero-portrait"
         >
           <div className="absolute inset-[0%] rounded-full border border-primary/30" />
