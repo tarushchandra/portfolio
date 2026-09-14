@@ -17,7 +17,7 @@ export function Header() {
           className="focus-ring flex items-center gap-3"
           data-testid="link-home"
         >
-          <span className="flex h-8 w-8 items-center justify-center bg-primary text-sm font-extrabold text-primary-foreground">
+          <span className="flex h-8 w-8 rounded-full items-center justify-center bg-primary text-sm font-extrabold text-primary-foreground">
             TC
           </span>
           <span className="hidden text-sm font-bold tracking-[-.02em] sm:block">
@@ -67,7 +67,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setDark(!dark)}
-            className="focus-ring flex h-9 w-9 items-center justify-center border hairline text-muted-foreground transition-colors hover:text-foreground"
+            className="focus-ring flex h-9 w-9 rounded-full cursor-pointer items-center justify-center border hairline text-muted-foreground transition-colors hover:text-foreground"
             aria-label={dark ? "Use light mode" : "Use dark mode"}
             data-testid="button-toggle-theme"
           >
@@ -79,7 +79,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setDark(!dark)}
-            className="focus-ring flex h-9 w-9 items-center justify-center border hairline text-muted-foreground"
+            className="focus-ring flex h-9 w-9 rounded-full cursor-pointer items-center justify-center border hairline text-muted-foreground"
             aria-label={dark ? "Use light mode" : "Use dark mode"}
             data-testid="button-toggle-theme-mobile"
           >
@@ -88,7 +88,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setOpen(!open)}
-            className="focus-ring flex h-9 w-9 items-center justify-center border hairline"
+            className="focus-ring flex h-9 w-9 rounded-full items-center justify-center border hairline"
             aria-label={open ? "Close menu" : "Open menu"}
             data-testid="button-toggle-menu"
           >

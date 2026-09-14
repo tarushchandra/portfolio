@@ -30,7 +30,7 @@ export function Hero() {
       />
       <div className="mx-auto grid min-h-[calc(100dvh-73px)] max-w-[1240px] items-center gap-12 px-5 py-8 sm:px-8 lg:grid-cols-12 lg:gap-4 lg:py-12">
         <div className="relative z-10 order-2 lg:order-1 lg:col-span-6">
-          <div className="reveal eyebrow mb-8 text-primary">
+          <div className="reveal reveal-delay-1 eyebrow mb-8 text-primary">
             Full-stack Developer
           </div>
           <h1
@@ -41,7 +41,7 @@ export function Hero() {
             <br />
             <em className="not-italic text-primary">systems</em> people feel.
           </h1>
-          <p className="reveal reveal-delay-3 mt-9 max-w-full text-base leading-7 text-muted-foreground sm:text-lg">
+          <p className="reveal reveal-delay-2 mt-9 max-w-full text-base leading-7 text-muted-foreground sm:text-lg">
             I love building things that inspire and create impact through clean,
             efficient code. Let's connect and collaborate! 👨‍💻
           </p>
@@ -75,7 +75,7 @@ export function Hero() {
               <Mail size={16} className="text-primary" />
             </Link>
           </div>
-          <div className="reveal reveal-delay-3 mt-10 flex flex-wrap items-center gap-3">
+          <div className="reveal reveal-delay-4 mt-10 flex flex-wrap items-center gap-3">
             <a
               href="#work"
               className="focus-ring inline-flex items-center gap-3 bg-primary px-5 py-3 text-sm font-bold text-primary-foreground transition-transform hover:-translate-y-0.5"
@@ -91,7 +91,7 @@ export function Hero() {
               Say hello <Mail size={15} />
             </a>
           </div>
-          <div className="reveal reveal-delay-3 mt-16 flex flex-wrap items-center gap-x-8 gap-y-3 text-xs text-muted-foreground">
+          <div className="reveal reveal-delay-5 mt-16 flex flex-wrap items-center gap-x-8 gap-y-3 text-xs text-muted-foreground">
             <span className="mono-font">Based in India · working globally</span>
             <span className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-accent" /> Available now
