@@ -42,9 +42,8 @@ export function Hero() {
             <em className="not-italic text-primary">systems</em> people feel.
           </h1>
           <p className="reveal reveal-delay-3 mt-9 max-w-full text-base leading-7 text-muted-foreground sm:text-lg">
-            Tarush Chandra is a frontend-focused full-stack software engineer
-            who moved from Electrical Engineering into software through roughly
-            3.5 years of rigorous, self-directed practice.
+            I love building things that inspire and create impact through clean,
+            efficient code. Let's connect and collaborate! 👨‍💻
           </p>
           <div className="reveal reveal-delay-3 my-4 flex items-center gap-5">
             <Link
@@ -95,8 +94,7 @@ export function Hero() {
           <div className="reveal reveal-delay-3 mt-16 flex flex-wrap items-center gap-x-8 gap-y-3 text-xs text-muted-foreground">
             <span className="mono-font">Based in India · working globally</span>
             <span className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-accent" /> Available for
-              thoughtful teams
+              <span className="h-2 w-2 rounded-full bg-accent" /> Available now
             </span>
           </div>
         </div>
