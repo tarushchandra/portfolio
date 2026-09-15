@@ -83,7 +83,6 @@ export function Hero() {
               src="/images/tarush-portrait.png"
               alt="Portrait of Tarush Chandra"
               fill
-              sizes="(min-width: 1024px) 300px, 60vw"
               className="rounded-full object-cover object-center"
               data-testid="img-hero-portrait"
               priority
