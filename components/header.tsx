@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, Moon, Sun, X } from "lucide-react";
+import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
 import { useTheme } from "@/context/theme-provider";
 
 export function Header() {
@@ -51,11 +51,14 @@ export function Header() {
             Contact
           </Link>
           <Link
-            href="/resume"
-            className="nav-link focus-ring text-[13px] font-semibold"
+            href="/docs/tarush-resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-link focus-ring text-[13px] font-semibold flex items-center gap-1"
             data-testid="link-nav-resume"
           >
-            Resume <span className="ml-1 text-primary">↗</span>
+            <h5>Resume</h5>
+            <ArrowUpRight size={16} className="text-primary" />
           </Link>
           <button
             type="button"
@@ -108,12 +111,15 @@ export function Header() {
               </Link>
             ))}
             <Link
-              href="/resume"
+              href="/docs/tarush-resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="nav-link focus-ring text-sm font-semibold"
+              className="nav-link focus-ring text-sm font-semibold flex items-center gap-1"
               data-testid="link-mobile-resume"
             >
-              Resume <span className="text-primary">↗</span>
+              <h5>Resume</h5>
+              <ArrowUpRight size={16} className="text-primary" />
             </Link>
           </div>
         </nav>

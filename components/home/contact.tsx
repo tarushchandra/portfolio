@@ -20,22 +20,21 @@ export function Contact() {
     >
       <div className="mx-auto grid max-w-[1240px] gap-16 px-5 py-24 sm:px-8 lg:grid-cols-[1fr_.8fr] lg:py-32">
         <div>
-          <SectionLabel index="04">Open channel</SectionLabel>
+          <SectionLabel index="03">Contact</SectionLabel>
           <h2 className="display-font mt-6 max-w-xl text-6xl leading-[.88] tracking-[-.05em] sm:text-8xl">
-            Have a hard
-            <br />
-            <span className="text-[#ef7655]">problem?</span>
+            Have an idea to
+            <span className="text-[#ef7655]"> build?</span>
           </h2>
           <p className="mt-8 max-w-md leading-7 text-[#a9c5c4]">
             I like working with people who care about the details and are honest
             about the constraints. Email is the quickest route in.
           </p>
           <a
-            href="mailto:tarush@example.com"
+            href="mailto:tarushchandra6@gmail.com"
             className="focus-ring mt-8 inline-flex items-center gap-3 text-sm font-bold text-[#f4efe5] underline decoration-[#ef7655] underline-offset-8"
             data-testid="link-contact-email"
           >
-            tarush@example.com <ArrowUpRight size={15} />
+            tarushchandra6@gmail.com <ArrowUpRight size={15} />
           </a>
         </div>
 

@@ -1,7 +1,3 @@
-import Link from "next/link";
-import { SiGithub, SiLeetcode, SiX, SiYoutube, SiGmail } from "react-icons/si";
-import { FaLinkedin } from "react-icons/fa";
-import { Github, Linkedin, Mail } from "lucide-react";
 import { Socials } from "./socials";
 
 export function Footer() {
@@ -12,7 +8,7 @@ export function Footer() {
           className="mono-font text-[10px] uppercase tracking-[.12em] text-muted-foreground"
           data-testid="text-footer-signature"
         >
-          TC / Made with intent
+          Made with ❤️
         </p>
         <div className="flex items-center gap-5">
           <Socials />
