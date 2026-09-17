@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Tarush Chandra — Full-Stack developer",
+  title: "Tarush Chandra — Full-Stack Developer",
   description:
     "Tarush Chandra — A full-stack developer specialized in React, Next.js, and Node.js. Building production-grade web apps with scalable architecture. Explore my portfolio and projects.",
 };
