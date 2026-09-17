@@ -4,9 +4,9 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Tarush Chandra — Frontend-focused full-stack engineer",
+  title: "Tarush Chandra — Full-Stack developer",
   description:
-    "Tarush Chandra is a frontend-focused full-stack software engineer who moved from Electrical Engineering into software through roughly 3.5 years of rigorous, self-directed practice.",
+    "Tarush Chandra — A full-stack developer specialized in React, Next.js, and Node.js. Building production-grade web apps with scalable architecture. Explore my portfolio and projects.",
 };
 
 export default function RootLayout({
