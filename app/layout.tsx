@@ -5,9 +5,9 @@ import { Toaster } from "sonner";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Tarush Chandra — Full-Stack Developer",
+  title: "Tarush Chandra — Software Engineer",
   description:
-    "Tarush Chandra — A full-stack developer specialized in React, Next.js, and Node.js. Building production-grade web apps with scalable architecture. Explore my portfolio and projects.",
+    "A software engineer specialized in React, Next.js, and Node.js. Building production-grade web apps with scalable architecture. Explore my portfolio and projects.",
 };
 
 export default function RootLayout({
