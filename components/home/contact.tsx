@@ -1,15 +1,51 @@
 "use client";
-
-import { useState, type FormEvent } from "react";
+import { useState, type SubmitEvent } from "react";
 import { ArrowUpRight, Check } from "lucide-react";
 import { SectionLabel } from "@/components/section-label";
+import { toast } from "sonner";
+
+async function sendMessage({
+  name,
+  email,
+  message,
+}: {
+  name: string;
+  email: string;
+  message: string;
+}) {
+  const response = await fetch("/api/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, email, message }),
+  });
+
+  if (!response.ok) throw new Error("Failed to send message");
+  return response.json();
+}
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+
+    toast.promise(sendMessage({ name, email, message }), {
+      loading: "Sending your message...",
+      success: () => {
+        setSubmitted(true);
+        setName("");
+        setEmail("");
+        setMessage("");
+        return "Message sent! I'll get back to you soon.";
+      },
+      error: "Something went wrong. Please try again.",
+      finally: () => setIsSubmitting(false),
+    });
   };
 
   return (
@@ -45,9 +81,6 @@ export function Contact() {
         >
           <div className="mb-8 flex items-center justify-between">
             <span className="eyebrow text-[#a9c5c4]">Or leave a note</span>
-            <span className="mono-font text-[10px] text-[#a9c5c4]">
-              01 / 02
-            </span>
           </div>
           <label className="block">
             <span className="mono-font text-[10px] uppercase tracking-[.12em] text-[#a9c5c4]">
@@ -55,7 +88,10 @@ export function Contact() {
             </span>
             <input
               required
+              type="text"
               name="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className="mt-3 w-full border-b border-[#a9c5c4]/40 bg-transparent px-0 py-3 text-sm text-[#f4efe5] outline-none placeholder:text-[#a9c5c4]/70 focus:border-[#ef7655]"
               placeholder="Ada Lovelace"
               data-testid="input-contact-name"
@@ -69,6 +105,8 @@ export function Contact() {
               required
               type="email"
               name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="mt-3 w-full border-b border-[#a9c5c4]/40 bg-transparent px-0 py-3 text-sm text-[#f4efe5] outline-none placeholder:text-[#a9c5c4]/70 focus:border-[#ef7655]"
               placeholder="you@company.com"
               data-testid="input-contact-email"
@@ -80,7 +118,9 @@ export function Contact() {
             </span>
             <textarea
               required
+              onChange={(e) => setMessage(e.target.value)}
               name="message"
+              value={message}
               rows={3}
               className="mt-3 w-full resize-none border-b border-[#a9c5c4]/40 bg-transparent px-0 py-3 text-sm text-[#f4efe5] outline-none placeholder:text-[#a9c5c4]/70 focus:border-[#ef7655]"
               placeholder="A short version is perfect."
@@ -89,7 +129,8 @@ export function Contact() {
           </label>
           <button
             type="submit"
-            className="focus-ring mt-8 inline-flex items-center gap-3 bg-[#ef7655] px-5 py-3 text-sm font-bold text-[#162a35] transition-transform hover:-translate-y-0.5"
+            disabled={isSubmitting}
+            className="focus-ring mt-8 inline-flex cursor-pointer items-center gap-3 bg-[#ef7655] px-5 py-3 text-sm font-bold text-[#162a35] transition-transform hover:-translate-y-0.5 disabled:opacity-60"
             data-testid="button-submit-contact"
           >
             {submitted ? (
@@ -98,20 +139,10 @@ export function Contact() {
               </>
             ) : (
               <>
-                Send message <ArrowUpRight size={15} />
+                Send message <ArrowUpRight size={15} />{" "}
               </>
             )}
           </button>
-          {submitted && (
-            <p
-              className="mt-4 text-xs text-[#a9c5c4]"
-              role="status"
-              data-testid="status-contact-success"
-            >
-              Thanks — this demo captured your note. Please use the email above
-              to start a real thread.
-            </p>
-          )}
         </form>
       </div>
     </section>
