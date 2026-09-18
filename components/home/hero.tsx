@@ -29,20 +29,20 @@ export function Hero() {
       />
       <div className="mx-auto grid min-h-[calc(100dvh-73px)] max-w-[1240px] items-center gap-12 px-5 py-8 sm:px-8 lg:grid-cols-12 lg:gap-4 lg:py-4">
         <div className="relative z-10 order-2 lg:order-1 lg:col-span-6">
-          <div className="reveal reveal-delay-1 eyebrow mb-8 text-primary">
-            Full-stack Developer
+          <div className="reveal reveal-delay-1 eyebrow mb-6 text-primary">
+            Software Engineer
           </div>
           <h1
             className="reveal reveal-delay-1 display-font max-w-4xl text-[clamp(3.7rem,9vw,8.5rem)] leading-[.86] tracking-[-.055em]"
             data-testid="text-hero-heading"
           >
-            I build the
+            I build
             <br />
-            <em className="not-italic text-primary">systems</em> people feel.
+            <em className="not-italic text-primary">products</em> that scale.
           </h1>
-          <p className="reveal reveal-delay-2 mt-9 max-w-full text-base leading-7 text-muted-foreground sm:text-lg">
-            I love building things that inspire and create impact through clean,
-            efficient code. Let's connect and collaborate! 👨‍💻
+          <p className="reveal reveal-delay-2 mt-4 max-w-full text-base leading-7 text-muted-foreground sm:text-lg">
+            Crafting modern web applications with a focus on performance,
+            scalability, and clean architecture.
           </p>
           <div className="reveal reveal-delay-3 my-4 flex items-center gap-5">
             <Socials />
